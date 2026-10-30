@@ -1,0 +1,689 @@
+{
+  "importedAt": "2026-10-30",
+  "edition": "Ф. М. Достоевский. Собрание сочинений в 15-ти томах. Л.: Наука, 1991. Т. 9–10.",
+  "indexUrl": "https://ilibrary.ru/text/1199/index.html",
+  "indexSha256": "67f93cec21aefb03037469f9437eb3978525360246c30969cc76d87b9c40e40d",
+  "chapterCount": 96,
+  "preface": true,
+  "sourcePages": [
+    {
+      "id": "preface",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.1/index.html",
+      "sha256": "e82b43c27a9395a94e1796f29f40b770a02513f370a121075dcdd560348d84c8",
+      "paragraphs": 9,
+      "characters": 3997
+    },
+    {
+      "id": "1-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.2/index.html",
+      "sha256": "9cc4671dc4ea4533d796f41c4de09ed0d060aba04b8c97ddba7836704adff6a1",
+      "paragraphs": 3,
+      "characters": 7490
+    },
+    {
+      "id": "1-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.3/index.html",
+      "sha256": "8e0f5f551f7f48335c8ef022535a3af3bda658e003d0e5c651729f7aef74d11a",
+      "paragraphs": 2,
+      "characters": 7100
+    },
+    {
+      "id": "1-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.4/index.html",
+      "sha256": "e74e817ccb89031bb77f4168c861c3f7295c2d3182073d33a0ee99c02495a0aa",
+      "paragraphs": 7,
+      "characters": 14376
+    },
+    {
+      "id": "1-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.5/index.html",
+      "sha256": "17dfc154e748f308b905d2bdcc36a39f15896024c2b2ffcbb7e20b5517270063",
+      "paragraphs": 15,
+      "characters": 18920
+    },
+    {
+      "id": "1-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.6/index.html",
+      "sha256": "46acd66eceae299d30d78818d82699f3b1611e8b5a720e1018d1168e6b725458",
+      "paragraphs": 7,
+      "characters": 21199
+    },
+    {
+      "id": "2-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.7/index.html",
+      "sha256": "06de33ce18c66bd1d5018b4c8d2d64f080d94f416fe68f13b05bc036c0981ff7",
+      "paragraphs": 47,
+      "characters": 10097
+    },
+    {
+      "id": "2-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.8/index.html",
+      "sha256": "8cd46dde19ff3d66ea88bfbf2b02514eef8579a7460b10d1c0c612410603b97c",
+      "paragraphs": 41,
+      "characters": 19390
+    },
+    {
+      "id": "2-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.9/index.html",
+      "sha256": "c4bb68dbc7374309439132dd0244928479b7a890afdbbca475028dfc5deceb5a",
+      "paragraphs": 48,
+      "characters": 15700
+    },
+    {
+      "id": "2-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.10/index.html",
+      "sha256": "1a828abd9da649401ab2f4eb4608ea9ca8f30ae594612ec0eed542261f54368d",
+      "paragraphs": 51,
+      "characters": 15931
+    },
+    {
+      "id": "2-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.11/index.html",
+      "sha256": "7579a9555cf29c0daf20916e0b6a1d96d1b6bba5ae9d9f110cc476d28811c091",
+      "paragraphs": 34,
+      "characters": 20726
+    },
+    {
+      "id": "2-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.12/index.html",
+      "sha256": "c2adf1c3e4497f3294b857d83596c3652f145d46da1353dfd3582d07e40cbe65",
+      "paragraphs": 68,
+      "characters": 22113
+    },
+    {
+      "id": "2-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.13/index.html",
+      "sha256": "0379bc430bccc4c4a2030b09a9059ad4f9b36932ec11eb4939fe89c735f7be51",
+      "paragraphs": 66,
+      "characters": 17680
+    },
+    {
+      "id": "2-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.14/index.html",
+      "sha256": "4c7359fbcc6761ecfdc865257d0280a7e9f509521589ef06b5bf7d7aed9b6f24",
+      "paragraphs": 56,
+      "characters": 18449
+    },
+    {
+      "id": "3-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.15/index.html",
+      "sha256": "3819e63320ceefe777296facc34f8899cca76902949c97a8e84d58f468c96b3a",
+      "paragraphs": 14,
+      "characters": 12348
+    },
+    {
+      "id": "3-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.16/index.html",
+      "sha256": "ccc4e46be68db12ccc947e186f710b61a6f24ca3bb9cf7bede0770c58d1f29b3",
+      "paragraphs": 1,
+      "characters": 9441
+    },
+    {
+      "id": "3-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.17/index.html",
+      "sha256": "60d81866cb741b8babd22f3f3c934fd20614e3d23e596dac57b56687ccf4bc7c",
+      "paragraphs": 49,
+      "characters": 17200
+    },
+    {
+      "id": "3-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.18/index.html",
+      "sha256": "65835fb5654af1720c95efa1aa7858454172622fe7354347bf1cd69abeda0653",
+      "paragraphs": 21,
+      "characters": 16770
+    },
+    {
+      "id": "3-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.19/index.html",
+      "sha256": "5e61ca7d96f93b97beb8e89a3c2b4dec9bf8947ad96491d038dfca925b0c6ebb",
+      "paragraphs": 70,
+      "characters": 16430
+    },
+    {
+      "id": "3-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.20/index.html",
+      "sha256": "211301215e19ebab702a88dcbbbc18db52919781dacf86e51ca51c7e72fa50f2",
+      "paragraphs": 26,
+      "characters": 11402
+    },
+    {
+      "id": "3-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.21/index.html",
+      "sha256": "41f551ed9da4f098c68c8da063b67b60aa99a05d8b9b50e9144c3a89a9040f52",
+      "paragraphs": 39,
+      "characters": 11708
+    },
+    {
+      "id": "3-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.22/index.html",
+      "sha256": "31079645abaed2934f052b10fb8ec7773f6372058ec2341af0138b464afa83a9",
+      "paragraphs": 82,
+      "characters": 13980
+    },
+    {
+      "id": "3-9",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.23/index.html",
+      "sha256": "52d5d73c489f1c88ecadeb54a01bc3d3601c38aa1449e0f7fd1e93d71e40f275",
+      "paragraphs": 78,
+      "characters": 10684
+    },
+    {
+      "id": "3-10",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.24/index.html",
+      "sha256": "b75574c058182d537153e495370f8a84b0242c0ce4ad1229ed11f264484e7676",
+      "paragraphs": 77,
+      "characters": 24047
+    },
+    {
+      "id": "3-11",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.25/index.html",
+      "sha256": "9bdc965b7a87f1eacef32b63011982e6733f80dada3647f11d08a81e58b727e6",
+      "paragraphs": 35,
+      "characters": 16195
+    },
+    {
+      "id": "4-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.26/index.html",
+      "sha256": "980bd663181cc1ca6790db27888ccf5d5ef58a2aac081d187612966ccf183523",
+      "paragraphs": 55,
+      "characters": 21823
+    },
+    {
+      "id": "4-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.27/index.html",
+      "sha256": "7fcec406376217c025a25090e510ea60b0cb737b1a45eaa65687e57b9ea98427",
+      "paragraphs": 43,
+      "characters": 9457
+    },
+    {
+      "id": "4-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.28/index.html",
+      "sha256": "a866cc0fe2eb47324e4a84449531fc3d6097d4175b6b5892facea916426f508d",
+      "paragraphs": 44,
+      "characters": 9683
+    },
+    {
+      "id": "4-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.29/index.html",
+      "sha256": "fec1ad2c851a9b0741b1dc6a7b82d49d67fa9b76e28414073c7abee5d7a08a13",
+      "paragraphs": 71,
+      "characters": 12667
+    },
+    {
+      "id": "4-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.30/index.html",
+      "sha256": "a2b20808d15d963906fb14b02c364167f995badcbbefbc1caf4e8c759d32a115",
+      "paragraphs": 65,
+      "characters": 24777
+    },
+    {
+      "id": "4-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.31/index.html",
+      "sha256": "f5758f95af6ad095b95a3866ede6bf96b883283f440797152522a927c4fd3891",
+      "paragraphs": 57,
+      "characters": 18075
+    },
+    {
+      "id": "4-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.32/index.html",
+      "sha256": "7fae5e94c6fe6f28dd4f1762c09e01eb26eae02ba705ca2f3bcd464914e8aca4",
+      "paragraphs": 39,
+      "characters": 22688
+    },
+    {
+      "id": "5-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.33/index.html",
+      "sha256": "bc470a8f35034fb5aa3a4102b3b43287175734de894f2d32424723b20d7f0fa3",
+      "paragraphs": 98,
+      "characters": 22359
+    },
+    {
+      "id": "5-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.34/index.html",
+      "sha256": "dfbd04df94d4e6489ed8debc56e5df50ad3c3a6403df2296cd65a5df0ead5a83",
+      "paragraphs": 66,
+      "characters": 12911
+    },
+    {
+      "id": "5-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.35/index.html",
+      "sha256": "72a7f82a662718a16a103922cf3c08643c81c8a8fe6ad03c5b76b3567f8a1f0d",
+      "paragraphs": 71,
+      "characters": 19515
+    },
+    {
+      "id": "5-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.36/index.html",
+      "sha256": "ecdd686c730be7d0d8b708b8d52c05fe788de33ad8ee2a2e5e6f69e3327e639e",
+      "paragraphs": 31,
+      "characters": 25506
+    },
+    {
+      "id": "5-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.37/index.html",
+      "sha256": "6c4d79eddd11d99e4451d379ce888cec3734ef663e8e8a3df268c8eb5c56d7b6",
+      "paragraphs": 62,
+      "characters": 46947
+    },
+    {
+      "id": "5-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.38/index.html",
+      "sha256": "3ee0d90e0e4dae5b98f969278fbc95f96639669e1f0a4ca2c2d4ca2ddc9cae8e",
+      "paragraphs": 63,
+      "characters": 24131
+    },
+    {
+      "id": "5-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.39/index.html",
+      "sha256": "3f8d38bca359d4104fc60177788d4bbf58e8d0dc43105b86e2730e5cec6f09b5",
+      "paragraphs": 39,
+      "characters": 17282
+    },
+    {
+      "id": "6-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.40/index.html",
+      "sha256": "d29dbb19533ab62546c81e9cf64f4835b3a45d3fc9a423ad450eb2602a5d01f2",
+      "paragraphs": 15,
+      "characters": 9450
+    },
+    {
+      "id": "6-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.41/index.html",
+      "sha256": "c160ec8a6883d687a8c1346a170f06729fe194a924e42e6bb685f0b141ba30b6",
+      "paragraphs": 69,
+      "characters": 65786
+    },
+    {
+      "id": "6-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.42/index.html",
+      "sha256": "8175be2445d29409422f4cd41d7efd3e54ebca6df50349d07dbbf5ddecbdf18d",
+      "paragraphs": 22,
+      "characters": 29959
+    },
+    {
+      "id": "7-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.43/index.html",
+      "sha256": "03eaebd770ab235a9a41eeedf25c03db805ec096e8bb09392747ef06a7a8d93d",
+      "paragraphs": 31,
+      "characters": 27905
+    },
+    {
+      "id": "7-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.44/index.html",
+      "sha256": "81154afe8abee0c18a3615e72389f61fedb5897ad98d64746d6f4421990e1414",
+      "paragraphs": 36,
+      "characters": 13244
+    },
+    {
+      "id": "7-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.45/index.html",
+      "sha256": "7281f6ce70c2a15d2142347bf40403ffd1f7507d199bb7c62fb40501aff15516",
+      "paragraphs": 126,
+      "characters": 38355
+    },
+    {
+      "id": "7-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.46/index.html",
+      "sha256": "de1e5db98bd4fff1dd95a01112112c2aed7f0d6c614bc0e02d3ade63a428cdf8",
+      "paragraphs": 23,
+      "characters": 9266
+    },
+    {
+      "id": "8-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.47/index.html",
+      "sha256": "e56f829ca375e736186ea146f7e8d11fb91a3e5857dbb73aea2da01e0d68fa7d",
+      "paragraphs": 31,
+      "characters": 24606
+    },
+    {
+      "id": "8-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.48/index.html",
+      "sha256": "d2a5d329bdaf9e64e6de61a24ddaf5a0c5154e90c43a6975bbbe9a5e0fe93e67",
+      "paragraphs": 36,
+      "characters": 15053
+    },
+    {
+      "id": "8-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.49/index.html",
+      "sha256": "4d9b25575628f91babc967535a58dc75f663e4cde5e9ec42d3bce8ff0782734d",
+      "paragraphs": 75,
+      "characters": 24912
+    },
+    {
+      "id": "8-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.50/index.html",
+      "sha256": "b4610021cecd0a0245e662a7b1946886c0e835e205bf9a07cc4d4d43c6a55a9a",
+      "paragraphs": 21,
+      "characters": 11852
+    },
+    {
+      "id": "8-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.51/index.html",
+      "sha256": "6de6c29bbc88bfa3941cfe492f2ea9f470bf54befb9232af5052b1b6c6c2ac3d",
+      "paragraphs": 176,
+      "characters": 30721
+    },
+    {
+      "id": "8-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.52/index.html",
+      "sha256": "2e3f592031e4e921cf2745fe5f673e0fc3fb7e7e9e080e83c4ec3d20cbe9061c",
+      "paragraphs": 82,
+      "characters": 15733
+    },
+    {
+      "id": "8-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.53/index.html",
+      "sha256": "e712c174a0f6d44c319ecb93ed7267b7d83b817169b99a649e7b39fe092f9aa4",
+      "paragraphs": 210,
+      "characters": 33640
+    },
+    {
+      "id": "8-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.54/index.html",
+      "sha256": "ea2415db2678ade3dd64edc00ddc824c16e180489fc142614a8922016ee60a7a",
+      "paragraphs": 114,
+      "characters": 26986
+    },
+    {
+      "id": "9-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.55/index.html",
+      "sha256": "d58726ab3128043ec32cab9125b505ee34f9a1a44339366463872fc7a47cd0e5",
+      "paragraphs": 29,
+      "characters": 14736
+    },
+    {
+      "id": "9-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.56/index.html",
+      "sha256": "5f247d47975f8ddbd4c46175db6ff24e03ba8aee9afa667d27eb10e67e9f1675",
+      "paragraphs": 6,
+      "characters": 14907
+    },
+    {
+      "id": "9-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.57/index.html",
+      "sha256": "ec4b72930ae85a45d9a9a926364a6f1e344a3a8cfa3d8993b95732e54d1420bf",
+      "paragraphs": 59,
+      "characters": 18196
+    },
+    {
+      "id": "9-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.58/index.html",
+      "sha256": "f4531ff2ded336bb9c252344e12a5053921ae66a209a5cc3df11bb3b94ba323c",
+      "paragraphs": 63,
+      "characters": 15677
+    },
+    {
+      "id": "9-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.59/index.html",
+      "sha256": "cc31bca676186c8f2228fb5d00370d778f47f7881af65bc97053846ac2cce3b9",
+      "paragraphs": 135,
+      "characters": 21673
+    },
+    {
+      "id": "9-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.60/index.html",
+      "sha256": "4e0844ddc30cf37bb8cf81e79b755b2d7e0d075f92eb7c3d994af67751014b3e",
+      "paragraphs": 69,
+      "characters": 16231
+    },
+    {
+      "id": "9-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.61/index.html",
+      "sha256": "5b0f58a45ae47d135212b7b91f41c65c7f3a7cb4f87b2c25304711116cf32571",
+      "paragraphs": 110,
+      "characters": 23155
+    },
+    {
+      "id": "9-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.62/index.html",
+      "sha256": "03421c235eaaba53de4db71334e6a32a869909f5640d278f6ea78b8bc289dfb5",
+      "paragraphs": 58,
+      "characters": 20308
+    },
+    {
+      "id": "9-9",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.63/index.html",
+      "sha256": "dbe55f965daae22a3061e64b7b33d20e413ac2b58bde6abf9e8728fdb26d7a57",
+      "paragraphs": 27,
+      "characters": 7673
+    },
+    {
+      "id": "10-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.64/index.html",
+      "sha256": "3a52b7ffcb101bde071dbacf0de1ce02f3f5be07b60a061ebf84532f3f425929",
+      "paragraphs": 3,
+      "characters": 11854
+    },
+    {
+      "id": "10-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.65/index.html",
+      "sha256": "8388e0c95ee53d20b3bc6cd13eb2d695b3b8c5c283a19e4a8bc368a5afef6208",
+      "paragraphs": 53,
+      "characters": 12053
+    },
+    {
+      "id": "10-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.66/index.html",
+      "sha256": "7b7df4eb4cc414a70c72f1a1bbaa0162f9a65d1fa828ee93bfcbe532634ef339",
+      "paragraphs": 131,
+      "characters": 14299
+    },
+    {
+      "id": "10-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.67/index.html",
+      "sha256": "fb2a425709336d60b7df93fca4bb637b8b4b9e32af7b4070bcb5a3ef3029d6d0",
+      "paragraphs": 36,
+      "characters": 15649
+    },
+    {
+      "id": "10-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.68/index.html",
+      "sha256": "a66a32090d9878b73c5acd9b6078cbea56fbfcbb25a8a2e86e945c19f801cafd",
+      "paragraphs": 122,
+      "characters": 35099
+    },
+    {
+      "id": "10-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.69/index.html",
+      "sha256": "b8960e43205945cf8554e69c906a6ef79cfbbd8a64978d95f9d65b6c1b6045d1",
+      "paragraphs": 74,
+      "characters": 13406
+    },
+    {
+      "id": "10-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.70/index.html",
+      "sha256": "0d399cee3046df605a83ee680b54576a6dd489d3c716e21f333855fb128a20b6",
+      "paragraphs": 46,
+      "characters": 7865
+    },
+    {
+      "id": "11-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.71/index.html",
+      "sha256": "7ddf4616f8ed9ba55a042359c059e9dac1e8094bde0bc34bbd9559734bc956ce",
+      "paragraphs": 63,
+      "characters": 19914
+    },
+    {
+      "id": "11-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.72/index.html",
+      "sha256": "1373f83c6a913f614ed03ed68b3f9e3c87ee13b18655e2b8db5d1379e51a5576",
+      "paragraphs": 45,
+      "characters": 21253
+    },
+    {
+      "id": "11-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.73/index.html",
+      "sha256": "35c565a12dd254eb06430ee420c01c5336c87778b725c1c2bd6605097536c3a8",
+      "paragraphs": 96,
+      "characters": 11791
+    },
+    {
+      "id": "11-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.74/index.html",
+      "sha256": "930fc1e1147c41f176471404e5dd6b2174e5dded1f6e4047c3c410fd4311de19",
+      "paragraphs": 99,
+      "characters": 27383
+    },
+    {
+      "id": "11-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.75/index.html",
+      "sha256": "6c7464b8ee11853b2e166eb2c2400f44b86dea01eb3539467696cde53e4e13c3",
+      "paragraphs": 80,
+      "characters": 11765
+    },
+    {
+      "id": "11-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.76/index.html",
+      "sha256": "c3aa28c8f9426f9a0144e3d9c54b9c985cf18f3061d89d1ab6ebc3caa54f2d84",
+      "paragraphs": 71,
+      "characters": 20928
+    },
+    {
+      "id": "11-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.77/index.html",
+      "sha256": "86c79d69c34ae6d004c3cbcef8c300dc519a348aad3c889da20363c0df7939f7",
+      "paragraphs": 64,
+      "characters": 19502
+    },
+    {
+      "id": "11-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.78/index.html",
+      "sha256": "fa78b2a716d1919084b44bfeb40e51b9dee581e43bfea93468e1a62c6fd2a319",
+      "paragraphs": 152,
+      "characters": 32129
+    },
+    {
+      "id": "11-9",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.79/index.html",
+      "sha256": "e78b0ff9958740e3365840bc0c9d71375edc27afc182f3c402f5e81c11febdbf",
+      "paragraphs": 134,
+      "characters": 40712
+    },
+    {
+      "id": "11-10",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.80/index.html",
+      "sha256": "3bfba163f9a2355a1279fc866144a1d01dd00f3f417ca7ca23b42d26455b95b7",
+      "paragraphs": 39,
+      "characters": 10428
+    },
+    {
+      "id": "12-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.81/index.html",
+      "sha256": "301bce175b4c8e1c1033bc6e86e14b8d6d774ca8a0e7e2d457755a4ccd2b4d7c",
+      "paragraphs": 14,
+      "characters": 16002
+    },
+    {
+      "id": "12-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.82/index.html",
+      "sha256": "a1609c35321ae3159bc171b0029defde12df9ac9eafe04e98a41bd49bb568b75",
+      "paragraphs": 56,
+      "characters": 20608
+    },
+    {
+      "id": "12-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.83/index.html",
+      "sha256": "5b1b6b49313d2cd3ed49d2faec8f2d46be8f67a81a3bc6b183c8f7f26a7d7f96",
+      "paragraphs": 25,
+      "characters": 12329
+    },
+    {
+      "id": "12-4",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.84/index.html",
+      "sha256": "8b03dc03fe80c681708613805f3215c97fef64f2e287461300e4899ec9bed566",
+      "paragraphs": 58,
+      "characters": 20790
+    },
+    {
+      "id": "12-5",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.85/index.html",
+      "sha256": "8082346d68210dc4c21c4a04a34e57e642c0873fef0bfe061f903abf08e9a64d",
+      "paragraphs": 52,
+      "characters": 20672
+    },
+    {
+      "id": "12-6",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.86/index.html",
+      "sha256": "a804d2f7b049dc6b933bf5d7e8bec4ab1102219011dfc6f00fb9495b976484d5",
+      "paragraphs": 11,
+      "characters": 23354
+    },
+    {
+      "id": "12-7",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.87/index.html",
+      "sha256": "06fab2bbeb70f791485949a7dd89d3a1afc35c280f6c1b135cc402c6542b0565",
+      "paragraphs": 5,
+      "characters": 12206
+    },
+    {
+      "id": "12-8",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.88/index.html",
+      "sha256": "80521e56f0d114394b4518fb10ada55f72c4ec712ed46b94e95b1e7398618612",
+      "paragraphs": 9,
+      "characters": 22908
+    },
+    {
+      "id": "12-9",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.89/index.html",
+      "sha256": "90f5009b0676038b66b255699f969839e7cf345d51b1a60ed6bc103aefa0daaa",
+      "paragraphs": 53,
+      "characters": 24321
+    },
+    {
+      "id": "12-10",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.90/index.html",
+      "sha256": "66482788d1a80f8fe76e6a2ad891f4be566a7d70dea909a7a8ebae447af343b9",
+      "paragraphs": 4,
+      "characters": 9996
+    },
+    {
+      "id": "12-11",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.91/index.html",
+      "sha256": "51707e7b6b85a72a230aad9667314b5ad7586677ffa724e6a2c0e3d3cfcb1bc3",
+      "paragraphs": 3,
+      "characters": 14580
+    },
+    {
+      "id": "12-12",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.92/index.html",
+      "sha256": "df27c17bd55b9949802eaa4fcee18b214dd78a4a0f1ef534611341fea36e3ff4",
+      "paragraphs": 3,
+      "characters": 18253
+    },
+    {
+      "id": "12-13",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.93/index.html",
+      "sha256": "f1e3cf3bb6ef72dabb4ceac3ac3cd1807bed1f2feb581fc82bbdfa0273ce5031",
+      "paragraphs": 7,
+      "characters": 17265
+    },
+    {
+      "id": "12-14",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.94/index.html",
+      "sha256": "1a3e3f4d3b895cf142a45c0bd3db08eb1fde7682ae684c48d036f3a4760694cd",
+      "paragraphs": 50,
+      "characters": 12862
+    },
+    {
+      "id": "13-1",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.95/index.html",
+      "sha256": "12f85094d63baa75a9e5a50e5aa028dd11a685a57981c895401ded08c34332be",
+      "paragraphs": 26,
+      "characters": 11332
+    },
+    {
+      "id": "13-2",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.96/index.html",
+      "sha256": "dc4312b76d642b68cc091bdc1566c944a348b3d5fdc23020a9c24c4501eb6f94",
+      "paragraphs": 64,
+      "characters": 14904
+    },
+    {
+      "id": "13-3",
+      "sourceUrl": "https://ilibrary.ru/text/1199/p.97/index.html",
+      "sha256": "87beb08ce7a768c283078c9345301e81ee09d4a6d950e92664786efd6b7f39e2",
+      "paragraphs": 67,
+      "characters": 20469
+    }
+  ]
+}
