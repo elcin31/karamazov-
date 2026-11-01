@@ -32,6 +32,9 @@ import {
   removeNote,
 } from "@/lib/reader-store";
 import type { Chapter, Quote } from "@/lib/types";
+import { eventDetails } from "@/data/event-atlas";
+import images from "@/data/images.json";
+import { FavoriteQuote, ArchiveTools } from "@/components/archive-tools";
 
 const MapCanvas = dynamic(() => import("./map-canvas"), {
   ssr: false,
@@ -49,11 +52,17 @@ const labels: Record<string, string> = {
   family: "Родство",
   conflict: "Конфликт",
   spiritual: "Духовная связь",
+  love: "Любовь",
+  philosophical: "Спор идей",
+  event: "События",
 };
 const colors: Record<string, string> = {
   family: "#ab9160",
   conflict: "#9b4c4b",
-  spiritual: "#72958c",
+  spiritual: "#637d71",
+  love: "#8b455c",
+  philosophical: "#675b89",
+  event: "#756545",
 };
 const isVisible = (id: string, order: number, spoilerFree: boolean) =>
   !spoilerFree || (chapterById.get(id)?.order ?? Infinity) <= order;
@@ -90,7 +99,8 @@ function SpoilerControl() {
         type="button"
         className={`explore-button ${reader.spoilerFree ? "is-active" : ""}`}
         onClick={() => updateReader({ spoilerFree: !reader.spoilerFree })}
-        disabled={!reader.hydrated} aria-pressed={reader.spoilerFree}
+        disabled={!reader.hydrated}
+        aria-pressed={reader.spoilerFree}
       >
         {reader.spoilerFree ? <EyeOff size={16} /> : <Eye size={16} />}{" "}
         {reader.spoilerFree ? "Без спойлеров" : "Все события"}
@@ -118,6 +128,7 @@ export function CharacterMap() {
   const reader = useLocalReader();
   const [filter, setFilter] = useState("all");
   const [selected, setSelected] = useState("alexei");
+  const [focused, setFocused] = useState(false);
   const visibleRelationships = useMemo(
     () =>
       relationships.filter(
@@ -131,7 +142,10 @@ export function CharacterMap() {
     () =>
       characters.map((character, index) => ({
         id: character.id,
-        position: positions[character.id] ?? { x: index * 180, y: 100 },
+        position: positions[character.id] ?? {
+          x: ((index - 12) % 6) * 225,
+          y: 850 + Math.floor((index - 12) / 6) * 180,
+        },
         data: {
           label: (
             <div className="person-node">
@@ -154,12 +168,39 @@ export function CharacterMap() {
         target: relation.target,
         label: relation.label,
         style: { stroke: colors[relation.type], strokeWidth: 1.4 },
-        labelStyle: { fill: "#b9ad95", fontSize: 10 },
-        labelBgStyle: { fill: "#1b1b18", fillOpacity: 0.94 },
+        labelStyle: { fill: "#4f463a", fontSize: 10 },
+        labelBgStyle: { fill: "#f4f1e9", fillOpacity: 0.94 },
         type: "default",
       })),
     [visibleRelationships],
   );
+  const graph = useMemo(() => {
+    if (!focused) return { nodes, edges };
+    const localEdges = edges.filter(
+      (e) => e.source === selected || e.target === selected,
+    );
+    const ids = new Set([
+      selected,
+      ...localEdges.flatMap((e) => [e.source, e.target]),
+    ]);
+    const localNodes = nodes.filter((n) => ids.has(n.id));
+    const other = localNodes.filter((n) => n.id !== selected);
+    return {
+      nodes: localNodes.map((n) => {
+        if (n.id === selected) return { ...n, position: { x: 310, y: 310 } };
+        const i = other.findIndex((o) => o.id === n.id);
+        const angle = (2 * Math.PI * i) / Math.max(other.length, 1);
+        return {
+          ...n,
+          position: {
+            x: 310 + 310 * Math.cos(angle),
+            y: 310 + 310 * Math.sin(angle),
+          },
+        };
+      }),
+      edges: localEdges,
+    };
+  }, [focused, nodes, edges, selected]);
   const person =
     characters.find((character) => character.id === selected) ?? characters[0];
   return (
@@ -167,7 +208,15 @@ export function CharacterMap() {
       <SpoilerControl />
       <div className="explore-toolbar">
         <div className="filter-tabs" aria-label="Тип отношений">
-          {["all", "family", "conflict", "spiritual"].map((type) => (
+          {[
+            "all",
+            "family",
+            "love",
+            "conflict",
+            "spiritual",
+            "philosophical",
+            "event",
+          ].map((type) => (
             <button
               type="button"
               key={type}
@@ -195,9 +244,19 @@ export function CharacterMap() {
           </select>
         </label>
       </div>
-      <p className="map-visible-count">
-        {visibleRelationships.length} связей · 12 героев
-      </p>
+      <div className="map-scope">
+        <label>
+          <input
+            type="checkbox"
+            checked={focused}
+            onChange={(e) => setFocused(e.target.checked)}
+          />{" "}
+          Только связи выбранного героя
+        </label>
+        <span className="map-visible-count">
+          {graph.edges.length} связей · {graph.nodes.length} героев
+        </span>
+      </div>
       <div className="map-layout">
         <div
           className="relationship-map"
@@ -205,8 +264,8 @@ export function CharacterMap() {
           aria-label="Интерактивная карта персонажей"
         >
           <MapCanvas
-            nodes={nodes}
-            edges={edges}
+            nodes={graph.nodes}
+            edges={graph.edges}
             selected={selected}
             onSelect={setSelected}
           />
@@ -312,7 +371,11 @@ export function Timeline() {
             reader.spoilerFree,
           );
           return (
-            <li key={event.id} className={visible ? "" : "event-locked"}>
+            <li
+              key={event.id}
+              id={event.id}
+              className={visible ? "" : "event-locked"}
+            >
               <div className="timeline-number">
                 {String(index + 1).padStart(2, "0")}
               </div>
@@ -330,6 +393,7 @@ export function Timeline() {
                 {visible ? (
                   <>
                     <p>{event.text}</p>
+                    <EventExpansion id={event.id} />
                     <Link
                       className="text-link"
                       href={`/read/${event.chapterId}`}
@@ -404,6 +468,7 @@ export function QuoteAtlas() {
             <span className="explore-kicker">{quote.theme}</span>
             <blockquote>«{quote.text}»</blockquote>
             <div className="quote-speaker">{quote.speaker}</div>
+            <FavoriteQuote id={quote.id} />
             <p>{quote.context}</p>
             <Link href={`/read/${quote.chapterId}`} className="text-link">
               {chapterLabel(quote.chapterId)} <ArrowUpRight size={15} />
@@ -518,7 +583,8 @@ export function Cabinet() {
         <button
           type="button"
           className="explore-button"
-          disabled={!reader.hydrated} onClick={exportNotebook}
+          disabled={!reader.hydrated}
+          onClick={exportNotebook}
         >
           <Download size={16} /> Скачать тетрадь
         </button>
@@ -666,9 +732,65 @@ export function Cabinet() {
           </div>
         </section>
       </div>
+      <ArchiveTools />
       <p className="notebook-feedback" role="status">
         {message}
       </p>
+    </div>
+  );
+}
+
+function EventExpansion({ id }: { id: string }) {
+  const reader = useLocalReader();
+  const d = eventDetails[id];
+  if (!d) return null;
+  const im = images.find((a) => a.id === d.imageId);
+  return (
+    <div className="event-expansion">
+      {im && (
+        <figure className="event-editorial-image">
+          <Link href={`/gallery?image=${im.id}`}>
+            <img
+              src={im.src}
+              width={im.width}
+              height={im.height}
+              alt={im.title}
+              loading="lazy"
+            />
+          </Link>
+          <figcaption className="art-note">
+            {im.title} · {im.author}.{" "}
+            {im.kind === "generated"
+              ? "Современная цифровая реконструкция"
+              : im.license.split(" · ")[0]}
+          </figcaption>
+        </figure>
+      )}
+      <div className="event-people">
+        {d.characterIds.map((c) => (
+          <Link href={`/characters/${c}`} key={c}>
+            {characters.find((x) => x.id === c)?.shortName}
+          </Link>
+        ))}
+      </div>
+      <p className="event-consequence">
+        <b>Последствия. </b>
+        {d.consequences}
+      </p>
+      <div className="event-people">
+        {d.relatedIds.map((e) => (
+          <Link href={`#${e}`} key={e}>
+            {isVisible(
+              events.find((x) => x.id === e)?.chapterId || "13-3",
+              reader.maxOrder,
+              reader.spoilerFree,
+            )
+              ? `К событию: ${events.find((x) => x.id === e)?.title}`
+              : "Связанное событие пока скрыто"}{" "}
+            ↗
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

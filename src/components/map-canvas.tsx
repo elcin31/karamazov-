@@ -1,6 +1,8 @@
 "use client";
+import { useEffect } from "react";
 import {
   ReactFlow,
+  useReactFlow,
   Background,
   Controls,
   MiniMap,
@@ -31,21 +33,33 @@ export default function MapCanvas({
       nodesDraggable={false}
       nodesConnectable={false}
       attributionPosition="bottom-left"
-      colorMode="dark"
+      colorMode="light"
       ariaLabelConfig={{
         "controls.zoomIn.ariaLabel": "Увеличить",
         "controls.zoomOut.ariaLabel": "Уменьшить",
         "controls.fitView.ariaLabel": "Показать всю карту",
       }}
     >
-      <Background color="#474338" gap={28} size={0.7} />
+      <ViewportUpdater signature={nodes.map((n) => n.id).join(",")} />
+      <Background color="#bdb29e" gap={28} size={0.7} />
       <Controls showInteractive={false} />
       <MiniMap
-        nodeColor={(node) => (node.id === selected ? "#b49c6b" : "#585043")}
-        maskColor="rgba(20,20,17,.7)"
+        nodeColor={(node) => (node.id === selected ? "#6c2933" : "#aa9c85")}
+        maskColor="rgba(233,227,215,.7)"
         pannable
         zoomable
       />
     </ReactFlow>
   );
+}
+
+function ViewportUpdater({ signature }: { signature: string }) {
+  const { fitView } = useReactFlow();
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      void fitView({ padding: 0.15, duration: 200, maxZoom: 1.2 });
+    }, 60);
+    return () => clearTimeout(timer);
+  }, [signature, fitView]);
+  return null;
 }

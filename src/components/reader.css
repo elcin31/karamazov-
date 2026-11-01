@@ -731,3 +731,39 @@
 .reader-text-status p {
   color: var(--r-muted);
 }
+/* The original reader controls and stored preferences remain intact. */
+.reader-prose {
+  font-family: var(--reading);
+  max-width: 70ch;
+}
+.reader-chapter-header h1 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 4.2vw, 60px);
+}
+.reader-paper {
+  background: var(--paper);
+  color: var(--ink);
+}
+.reader-paper .reader-toolbar {
+  background: var(--paper);
+  border-color: var(--line);
+}
+.reader-paper .reader-prose p {
+  color: var(--ink);
+}
+.reader-night .reader-prose p {
+  color: #ded6c5;
+}
+.reader-back {
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.reader-guide-link {
+  font-size: 11px;
+  border-bottom: 1px solid currentColor;
+  padding: 8px 0;
+  display: inline-block;
+  margin-top: 15px;
+}

@@ -1,89 +1,115 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import { history } from "@/data/museum";
-export const metadata: Metadata = { title: "Достоевский и его время" };
+import {
+  authorSections,
+  authorChronology,
+  authorSources,
+  authorQuotes,
+} from "@/data/author";
+import { Artwork, ArticleSources } from "@/components/editorial";
+import { SaveArticle } from "@/components/archive-tools";
+export const metadata: Metadata = {
+  title: "Достоевский — жизнь и история последнего романа",
+  description:
+    "Биография, последние годы, история замысла, журнальная публикация, письма и рецепция «Братьев Карамазовых».",
+};
 export default function Context() {
   return (
     <div className="page-shell">
-      <span className="eyebrow">ИСТОРИЧЕСКИЙ И ЛИТЕРАТУРНЫЙ КОНТЕКСТ</span>
-      <h1 className="page-title">Время, ставшее романом</h1>
-      <p className="page-intro">
-        Роман о семье вырастает из пережитого писателем и из больших вопросов
-        пореформенной России. Между биографией и художественным миром есть связи
-        — но нет простого равенства.
-      </p>
-      <div className="context-grid">
-        <aside>
-          <div className="context-portrait">
-            <Image
-              src="/images/dostoevsky.webp"
-              fill
-              sizes="(max-width:560px) 100vw, 40vw"
-              alt="Фёдор Достоевский. Портрет В. Г. Перова, 1872"
-            />
-          </div>
-          <p className="art-note">
-            В. Г. Перов, 1872. Государственная Третьяковская галерея.
+      <header className="context-hero">
+        <div>
+          <span className="eyebrow">ДОСТОЕВСКИЙ / ИСТОРИЯ РОМАНА</span>
+          <h1 className="page-title">
+            Последние годы.
             <br />
-            Общественное достояние. Репродукция Wikimedia Commons.
+            Незавершённый разговор.
+          </h1>
+          <p className="large-serif">
+            От биографии писателя — к истории текста, который оказался его
+            последним завершённым романом.
           </p>
-        </aside>
-        <article className="prose">
-          <h2 style={{ marginTop: 0 }}>Человек на переломе</h2>
-          <p>
-            Фёдор Михайлович Достоевский (1821–1881) пережил арест, инсценировку
-            казни, каторгу и военную службу. В «Записках из Мёртвого дома» он
-            осмыслял опыт несвободы; в поздних романах исследовал пределы личной
-            воли и цену идеи, оторванной от живого человека.
+          <p className="page-intro">
+            Биографическая параллель не объясняет героя целиком. В этом разделе
+            документы отделены от возможных связей между жизнью, замыслом и
+            художественным миром.
           </p>
-          <p>
-            В 1860–1870-е годы в России менялись суд, общественная жизнь и
-            отношения поколений. Судебная реформа 1864 года ввела состязательный
-            процесс с участием присяжных. В «Братьях Карамазовых» суд становится
-            местом борьбы психологических версий: убедительный рассказ ещё не
-            гарантирует истины.
-          </p>
-          <h2>Старая Русса и Скотопригоньевск</h2>
-          <p>
-            Многие бытовые и топографические детали романа связывают со Старой
-            Руссой, где Достоевские проводили значительную часть 1870-х годов.
-            Однако город романа — художественное пространство, а не
-            документальный путеводитель.
-          </p>
-          <h2>Роман как встреча голосов</h2>
-          <p>
-            Михаил Бахтин предложил читать романы Достоевского как
-            полифонические: герой обладает собственным сознанием, не исчерпанным
-            окончательной авторской оценкой. Это исследовательский подход,
-            позволяющий услышать несовпадающие позиции братьев и их
-            собеседников, а не готовый ключ ко всем эпизодам.
-          </p>
-          <Link href="/sources" className="text-link">
-            Литература и первоисточники ↗
-          </Link>
+          <SaveArticle
+            id="author:history"
+            title="Достоевский и история романа"
+            url="/context"
+          />
+        </div>
+        <Artwork id="dostoevsky-panov-1880" />
+      </header>
+      <div className="article-layout">
+        <nav
+          className="article-contents"
+          aria-label="История романа: содержание"
+        >
+          <span>ПИСАТЕЛЬ И ЕГО ВРЕМЯ</span>
+          {authorSections.map((s) => (
+            <a href={`#${s.id}`} key={s.id}>
+              {s.title}
+            </a>
+          ))}
+          <a href="#letter">Голос документа</a>
+          <a href="#chronology">Хронология</a>
+          <a href="#references">Источники</a>
+        </nav>
+        <article className="article-body prose">
+          {authorSections.map((s, i) => (
+            <section key={s.id} id={s.id} className="article-section">
+              <span className="kind-label">
+                Исторический контекст и редакционный комментарий
+              </span>
+              <h2>{s.title}</h2>
+              {s.paragraphs.map((p, j) => (
+                <p key={j}>{p}</p>
+              ))}
+              {i === 1 && <Artwork id="anna-1871" />}
+              {i === 3 && <Artwork id="karamazov-draft" />}
+              {i === 6 && <Artwork id="vremya-1861" />}
+            </section>
+          ))}
+          <section id="letter" className="article-section">
+            <span className="kind-label">Первичный документ</span>
+            <h2>Автор о пятой книге</h2>
+            {authorQuotes.map((q) => (
+              <blockquote className="argument" key={q.id}>
+                <p>«{q.text}»</p>
+                <cite>
+                  {q.author}
+                  <br />
+                  {q.date}
+                </cite>
+                <p className="art-note">{q.context}</p>
+                <a
+                  href={q.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-link"
+                >
+                  Прочитать письмо ↗
+                </a>
+              </blockquote>
+            ))}
+          </section>
+          <section id="chronology">
+            <h2>Жизнь и работа над романом</h2>
+            <ol className="history-list">
+              {authorChronology.map((h) => (
+                <li key={h.year + h.title}>
+                  <time>{h.year}</time>
+                  <div>
+                    <h3>{h.title}</h3>
+                    <p>{h.text}</p>
+                    {h.imageId && <Artwork id={h.imageId} />}
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+          <ArticleSources sources={authorSources} />
         </article>
-      </div>
-      <h2 style={{ marginTop: 60 }}>История замысла и публикации</h2>
-      <ol className="history-list">
-        {history.map((h) => (
-          <li key={h.year}>
-            <time>{h.year}</time>
-            <div>
-              <h3>{h.title}</h3>
-              <p>{h.text}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-      <div className="paper-panel prose">
-        <h2 style={{ marginTop: 0 }}>Как читать исторический контекст</h2>
-        <p>
-          Прототип помогает поставить вопрос, но не заменяет героя.
-          Биографическая параллель не доказывает авторского намерения. На этом
-          сайте исторические сведения и интерпретации обозначены отдельно, а
-          сюжетные выводы всегда следует проверять по тексту.
-        </p>
       </div>
     </div>
   );

@@ -62,7 +62,9 @@ test("quote atlas searches verified text and saves chapter bookmarks", async ({
     .getByRole("button", { name: "Без спойлеров", exact: true })
     .click();
   await expect(page.locator(".atlas-quote").first()).toBeVisible();
-  await page.getByLabel("Поиск по цитатам").fill("Главное, самому себе не лгите.");
+  await page
+    .getByLabel("Поиск по цитатам")
+    .fill("Главное, самому себе не лгите.");
   await expect(page.locator(".atlas-quote")).toHaveCount(1);
   await expect(page.locator(".atlas-quote blockquote")).toContainText(
     "самому себе не лгите",
@@ -101,7 +103,11 @@ test("cabinet persists note, exports notebook, and deletes note", async ({
   ]);
   expect(download.suggestedFilename()).toBe("karamazov-notebook.json");
   const backup = JSON.parse(await readFile((await download.path())!, "utf8"));
-  expect(backup.notes).toEqual([expect.objectContaining({text:"Тестовая заметка о свободе и ответственности."})]);
+  expect(backup.notes).toEqual([
+    expect.objectContaining({
+      text: "Тестовая заметка о свободе и ответственности.",
+    }),
+  ]);
   await page
     .getByRole("button", { name: "Удалить заметку", exact: true })
     .click();

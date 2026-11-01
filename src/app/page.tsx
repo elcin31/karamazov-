@@ -1,280 +1,278 @@
 import Link from "next/link";
-import Image from "next/image";
-import {
-  ArrowUpRight,
-  ArrowRight,
-  BookOpen,
-  Network,
-  Clock3,
-  Quote,
-  ChevronDown,
-} from "lucide-react";
-import { Reveal } from "@/components/motion-reveal";
-import { characters } from "@/data/museum";
+import { Artwork, SectionHeading } from "@/components/editorial";
 import { Portrait } from "@/components/portrait";
-import quotes from "@/data/quotes.json";
-const homeQuote = quotes.find(q => q.id === "battle")!;
+import { characters } from "@/data/museum";
 export default function Home() {
   return (
-    <div className="home">
-      <section className="hero">
-        <Image
-          src="/images/hero.webp"
-          alt="Авторская композиция: Карамазовы в сумеречном монастырском дворе"
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="hero-image"
-        />
-        <div className="hero-shade" />
-        <div className="hero-content">
-          <span className="eyebrow hero-eyebrow">
-            <span /> РОМАН О ЧЕЛОВЕКЕ. МУЗЕЙ О КАЖДОМ ИЗ НАС.
-          </span>
-          <p className="hero-author">Фёдор Михайлович Достоевский</p>
+    <div className="museum-home">
+      <section className="editorial-hero">
+        <div className="hero-copy">
+          <span className="eyebrow">Ф. М. ДОСТОЕВСКИЙ · 1879—1880</span>
           <h1>
-            БРАТЬЯ
+            Братья
             <br />
-            КАРАМАЗОВЫ<span className="title-dot">.</span>
+            <em>Карамазовы</em>
           </h1>
+          <p className="hero-dek">
+            Семейная хроника.
+            <br />
+            Философский спор.
+            <br />
+            История преступления.
+          </p>
           <p className="hero-description">
-            Вера и сомнение. Любовь и вина. Свобода и выбор.
-            <br className="desktop-break" /> Войдите в мир романа, в котором
-            вечные вопросы
-            <br className="desktop-break" /> обретают человеческие лица.
+            Литературный музей последнего романа Достоевского. Полный текст,
+            архивные документы и исследования помогают увидеть, как частная
+            история семьи становится разговором о свободе, вере и
+            ответственности.
           </p>
           <div className="hero-actions">
-            <Link prefetch={false} className="button button-burgundy" href="#explore">
-              Исследовать роман <ArrowUpRight size={17} />
+            <Link href="/read" className="button button-wine" prefetch={false}>
+              Читать роман <span>↗</span>
             </Link>
-            <Link prefetch={false} className="button button-glass" href="/read">
-              <BookOpen size={17} /> Начать чтение
+            <Link href="/guide" className="underlined-link" prefetch={false}>
+              Путеводитель по книгам
             </Link>
           </div>
+          <div className="hero-edition">
+            <span>
+              Четыре части
+              <br />
+              Двенадцать книг и эпилог
+            </span>
+            <span>
+              Полный русский текст
+              <br />
+              Без регистрации
+            </span>
+          </div>
         </div>
-        <div className="hero-bottom">
-          <span>
-            1879–1880 <i /> ПОСЛЕДНИЙ РОМАН ДОСТОЕВСКОГО
-          </span>
-          <a href="#explore" aria-label="Перейти к разделам музея">
-            <ChevronDown size={18} /> ПРОДОЛЖИТЬ ПУТЕШЕСТВИЕ
-          </a>
-          <span className="hero-art-label">
-            Современная цифровая иллюстрация
+        <div className="hero-art">
+          <Artwork id="dostoevsky" priority />
+          <span className="hero-folio" aria-hidden="true">
+            I
           </span>
         </div>
       </section>
-      <section className="home-intro">
-        <span className="eyebrow">
-          НЕ ПРОСТО ПРОЧИТАТЬ. ПОЧУВСТВОВАТЬ И ПОНЯТЬ.
-        </span>
-        <h2>
-          Один роман. <em>Бесконечность вопросов.</em>
-        </h2>
+      <section className="issue-note">
+        <span className="eyebrow">КАК ПОЛЬЗОВАТЬСЯ МУЗЕЕМ</span>
         <p>
-          Семейная драма, судебная история, философский спор — и удивительно
-          точный портрет человека.
-          <br />
-          Этот музей — пространство для медленного чтения, открытий и
-          собственного взгляда.
+          Начните с текста — или с вопроса. Страницы героев связаны с главами,
+          событиями и исследованиями. Режим без спойлеров сохраняет
+          неизвестность; читательский архив собирает ваши заметки.
         </p>
-      </section>
-      <section className="home-section" id="explore">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">01 / ПРОСТРАНСТВО РОМАНА</span>
-            <h2>Выберите свой путь</h2>
-          </div>
-          <span className="section-aside">
-            Нет единственного способа понять Достоевского
-          </span>
-        </div>
-        <div className="path-grid">
-          <Link prefetch={false} href="/read" className="path-feature">
-            <Image
-              src="/images/first-edition.webp"
-              alt="Факсимиле журнальной публикации романа"
-              fill
-              sizes="(max-width:700px) 100vw, 40vw"
-            />
-            <div className="path-overlay" />
-            <div className="path-content">
-              <span className="eyebrow">ПОЛНЫЙ ТЕКСТ · 12 КНИГ И ЭПИЛОГ</span>
-              <h3>
-                Наедине
-                <br />с Достоевским
-              </h3>
-              <p>
-                Читайте в своём ритме.
-                <br />
-                Сохраняйте мысли на полях.
-              </p>
-              <span className="text-link">
-                Открыть роман <ArrowUpRight size={19} />
-              </span>
-            </div>
-          </Link>
-          <div className="path-list">
-            {[
-              {
-                href: "/characters",
-                n: "I",
-                title: "Лица и судьбы",
-                text: "Двенадцать героев. Противоречия, страсти и связи.",
-                label: "Энциклопедия персонажей",
-              },
-              {
-                href: "/philosophy",
-                n: "II",
-                title: "Вопросы без простых ответов",
-                text: "Восемь философских тем — от веры до свободы.",
-                label: "Философский атлас",
-              },
-              {
-                href: "/context",
-                n: "III",
-                title: "Время, ставшее романом",
-                text: "Россия XIX века, замысел и история последней книги.",
-                label: "История и контекст",
-              },
-            ].map((x) => (
-              <Link prefetch={false} className="path-row" href={x.href} key={x.href}>
-                <span className="path-number">{x.n}</span>
-                <div>
-                  <span className="eyebrow">{x.label}</span>
-                  <h3>{x.title}</h3>
-                  <p>{x.text}</p>
-                </div>
-                <ArrowUpRight size={24} />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-      <section className="home-section characters-home">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">02 / ЧЕЛОВЕК — ЭТО ТАЙНА</span>
-            <h2>Четыре Карамазова</h2>
-          </div>
-          <Link prefetch={false} className="text-link" href="/characters">
-            Все персонажи <ArrowRight size={17} />
-          </Link>
-        </div>
-        <Reveal className="brothers-grid">
-          {characters.slice(0, 4).map((c, i) => (
-            <Link prefetch={false}
-              key={c.id}
-              href={`/characters/${c.id}`}
-              className="brother-card"
-            >
-              <div className="portrait-wrap">
-                <Portrait id={c.id} name={c.name} />
-                <span className="portrait-number">0{i + 1}</span>
-                <ArrowUpRight className="portrait-arrow" size={20} />
-              </div>
-              <span className="eyebrow">{c.epithet}</span>
-              <h3>{c.shortName}</h3>
-              <p>{c.intro}</p>
-            </Link>
-          ))}
-        </Reveal>
-      </section>
-      <section className="home-quote">
-        <span className="eyebrow">
-          КНИГА III, ГЛАВА III · «ИСПОВЕДЬ ГОРЯЧЕГО СЕРДЦА. В СТИХАХ»
-        </span>
-        <blockquote>«{homeQuote.text}»</blockquote>
-        <p>Дмитрий Карамазов</p>
-        <Link prefetch={false} href="/quotes" className="text-link">
-          Исследовать атлас цитат <ArrowUpRight size={17} />
+        <Link href="/routes" className="text-link">
+          Выбрать маршрут ↗
         </Link>
       </section>
-      <section className="home-section">
-        <div className="section-heading">
-          <div>
-            <span className="eyebrow">03 / ИНСТРУМЕНТЫ ИССЛЕДОВАТЕЛЯ</span>
-            <h2>Увидеть больше, чем сюжет</h2>
+      <section className="home-reading">
+        <SectionHeading
+          number="01"
+          title="Роман, книга за книгой"
+          href="/guide"
+          label="Полный путеводитель"
+        />
+        <div className="reading-spread">
+          <div className="edition-image">
+            <Artwork id="first-edition" />
+          </div>
+          <div className="reading-editorial">
+            <span className="eyebrow">
+              ЧИТАТЬ · СОПОСТАВЛЯТЬ · ВОЗВРАЩАТЬСЯ
+            </span>
+            <h2>
+              Войти в историю
+              <br />
+              одной семейки
+            </h2>
+            <p>
+              Предисловие обещает жизнеописание Алёши. Но читатель сначала
+              знакомится с отцом и братьями — с семейной историей, в которой
+              забота о ребёнке всякий раз оказывается чьим-то чужим делом.
+            </p>
+            <p>
+              Путеводитель отделяет события от их толкований. Каждая книга
+              сопровождается разбором, а каждая глава — вопросами для
+              внимательного чтения.
+            </p>
+            <div className="reading-links">
+              <Link href="/read/preface" prefetch={false}>
+                От автора <span>Оригинальный текст ↗</span>
+              </Link>
+              <Link href="/guide/1" prefetch={false}>
+                История одной семейки <span>Книга первая · путеводитель ↗</span>
+              </Link>
+              <Link href="/chapters/5-5" prefetch={false}>
+                Великий инквизитор{" "}
+                <span>Текст и исследовательский комментарий ↗</span>
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="tool-grid">
-          {[
-            {
-              href: "/map",
-              icon: Network,
-              n: "01",
-              title: "Всё связано",
-              text: "Карта отношений: от родства до духовного влияния.",
-            },
-            {
-              href: "/timeline",
-              icon: Clock3,
-              n: "02",
-              title: "Нить событий",
-              text: "Хронология романа с переходами к ключевым главам.",
-            },
-            {
-              href: "/quotes",
-              icon: Quote,
-              n: "03",
-              title: "Голоса романа",
-              text: "Проверенные цитаты, темы и контекст каждого слова.",
-            },
-          ].map((x) => (
-            <Link prefetch={false} href={x.href} className="tool-card" key={x.href}>
-              <div>
-                <x.icon size={28} strokeWidth={1} />
-                <span>{x.n}</span>
-              </div>
-              <h3>{x.title}</h3>
-              <p>{x.text}</p>
-              <ArrowUpRight size={20} />
+      </section>
+      <section className="home-dossier">
+        <div className="dossier-image">
+          <Portrait id="ivan" name="Иван Карамазов" />
+          <p className="art-note">
+            Иван Карамазов. Современная цифровая иллюстрация; художественная
+            интерпретация.
+          </p>
+        </div>
+        <div className="dossier-copy">
+          <span className="eyebrow">
+            В ЦЕНТРЕ ВНИМАНИЯ · ИССЛЕДОВАТЕЛЬСКОЕ ДОСЬЕ
+          </span>
+          <h2>
+            Иван.
+            <br />
+            Право не согласиться
+          </h2>
+          <p className="large-serif">
+            Что именно Иван отказывается принять — Бога, устройство мира или
+            цену будущей гармонии?
+          </p>
+          <p>
+            Его разговор с Алёшей нельзя свести к формуле неверия. «Бунт» ставит
+            вопрос о страдании детей, а поэма об инквизиторе меняет саму
+            плоскость спора: способен ли человек вынести свободу?
+          </p>
+          <Link
+            href="/characters/ivan"
+            className="underlined-link"
+            prefetch={false}
+          >
+            Читать досье Ивана
+          </Link>
+          <div className="dossier-related">
+            <Link href="/philosophy/rebellion" prefetch={false}>
+              Бунт Ивана ↗
+            </Link>
+            <Link href="/philosophy/inquisitor" prefetch={false}>
+              Великий инквизитор ↗
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="home-people">
+        <SectionHeading
+          number="02"
+          title="Лица и отношения"
+          href="/characters"
+          label="Энциклопедия героев"
+        />
+        <div className="people-intro">
+          <p>
+            От Карамазовых до семьи Снегирёвых, от монастыря до зала суда.
+            Большие и малые роли складываются в мир, где ни один человек не
+            исчерпывается чужим приговором.
+          </p>
+          <Link className="text-link" href="/map">
+            Исследовать карту связей ↗
+          </Link>
+        </div>
+        <div className="people-roster">
+          {characters.slice(0, 12).map((c, i) => (
+            <Link href={`/characters/${c.id}`} key={c.id} prefetch={false}>
+              <span className="roster-number">
+                {String(i + 1).padStart(2, "0")}
+              </span>
+              <span>{c.shortName}</span>
+              <small>{c.epithet}</small>
+              <b aria-hidden="true">↗</b>
             </Link>
           ))}
         </div>
       </section>
-      <section className="author-section">
-        <div className="author-image">
-          <Image
-            src="/images/dostoevsky.webp"
-            alt="Ф. М. Достоевский. Портрет работы В. Г. Перова, 1872"
-            fill
-            sizes="(max-width:700px) 100vw, 40vw"
-          />
-        </div>
-        <div className="author-copy">
-          <span className="eyebrow">ЗА СТРАНИЦАМИ РОМАНА</span>
-          <h2>
-            Последняя книга.
-            <br />
-            <em>Главные вопросы.</em>
-          </h2>
-          <p>
-            Достоевский писал «Братьев Карамазовых» в 1878–1880 годах. В
-            последнем завершённом романе сошлись его размышления о вере,
-            человеческой свободе и ответственности перед другим.
-          </p>
-          <p>
-            Рукопись стала итогом жизни. Разговор, начатый на её страницах,
-            продолжается.
-          </p>
-          <Link prefetch={false} className="text-link" href="/context">
-            О писателе и его времени <ArrowRight size={18} />
-          </Link>
-          <small>
-            В. Г. Перов. Портрет Ф. М. Достоевского, 1872.
-            <br />
-            Государственная Третьяковская галерея · Общественное достояние
-          </small>
+      <section className="home-studies">
+        <SectionHeading
+          number="03"
+          title="Не один ответ"
+          href="/philosophy"
+          label="Все исследования"
+        />
+        <div className="study-frontpage">
+          <article>
+            <span className="eyebrow">ФИЛОСОФИЯ</span>
+            <h3>
+              <Link href="/philosophy/innocence" prefetch={false}>
+                Можно ли оправдать страдание ребёнка?
+              </Link>
+            </h3>
+            <p>
+              Не отвлечённая задача о происхождении зла, а вопрос, на который
+              Иван требует личного ответа.
+            </p>
+            <Link href="/philosophy/innocence" className="text-link">
+              Страдание детей ↗
+            </Link>
+          </article>
+          <article>
+            <span className="eyebrow">ЭТИКА</span>
+            <h3>
+              <Link href="/philosophy/money" prefetch={false}>
+                Три тысячи рублей — и цена достоинства
+              </Link>
+            </h3>
+            <p>
+              Долг, наследство, милостыня и подкуп: деньги связывают сюжет с
+              нравственными отношениями.
+            </p>
+            <Link href="/philosophy/money" className="text-link">
+              Деньги и нравственность ↗
+            </Link>
+          </article>
+          <article>
+            <span className="eyebrow">ПРАВО</span>
+            <h3>
+              <Link href="/court" prefetch={false}>
+                Убедительный рассказ ещё не доказательство
+              </Link>
+            </h3>
+            <p>
+              Сопоставьте улики, свидетельства и версии. Отделите знания суда от
+              того, что доступно читателю.
+            </p>
+            <Link href="/court" className="text-link">
+              Войти в судебный зал ↗
+            </Link>
+          </article>
         </div>
       </section>
-      <section className="reading-invitation">
-        <span className="eyebrow">ВАША ИСТОРИЯ ЧТЕНИЯ НАЧИНАЕТСЯ ЗДЕСЬ</span>
-        <h2>Откройте первую страницу.</h2>
-        <p>Без регистрации. В своём темпе. С правом на собственный ответ.</p>
-        <Link prefetch={false} href="/read" className="button button-burgundy">
-          Начать чтение <ArrowUpRight size={17} />
+      <section className="home-archive">
+        <div>
+          <span className="eyebrow">КОЛЛЕКЦИЯ</span>
+          <h2>
+            Свидетельства
+            <br />
+            времени.
+          </h2>
+          <p>
+            Портреты, страницы изданий, письма и исторические виды. Архивный
+            документ и современная реконструкция имеют разные задачи — и всегда
+            обозначены отдельно.
+          </p>
+          <Link href="/gallery" className="underlined-link" prefetch={false}>
+            Открыть художественный архив
+          </Link>
+          <Link href="/context" className="text-link">
+            Достоевский и история романа ↗
+          </Link>
+        </div>
+        <Artwork id="theatre-1922" />
+      </section>
+      <section className="home-final">
+        <span className="eyebrow">ЛИЧНЫЙ ЧИТАТЕЛЬСКИЙ АРХИВ</span>
+        <h2>
+          Оставить место
+          <br />
+          для собственной мысли.
+        </h2>
+        <p>
+          Закладки, избранные цитаты, сохранённые исследования и заметки — на
+          вашем устройстве. Без обязательной регистрации.
+        </p>
+        <Link href="/cabinet" className="button button-wine" prefetch={false}>
+          Открыть архив ↗
         </Link>
       </section>
     </div>

@@ -3,6 +3,7 @@ import "./fonts.css";
 import "./globals.css";
 import { Header, Footer } from "@/components/shell";
 export const metadata: Metadata = {
+  metadataBase: new URL("https://karamazov-eight.vercel.app"),
   title: {
     default: "КАРАМАЗОВ — цифровой литературный музей",
     template: "%s · КАРАМАЗОВ",
@@ -14,14 +15,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ru_RU",
     title: "КАРАМАЗОВ — цифровой литературный музей",
-    description: "Один роман. Бесконечность вопросов.",
+    description:
+      "Полный текст, архивная коллекция и исследовательские маршруты.",
   },
   robots: { index: true, follow: true },
 };
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#171714",
+  themeColor: "#f4f1e9",
 };
 export default function RootLayout({
   children,
@@ -31,8 +33,20 @@ export default function RootLayout({
   return (
     <html lang="ru" data-scroll-behavior="smooth">
       <head>
-        <link rel="preload" href="/fonts/cormorant-500.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/golos-400.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link
+          rel="preload"
+          href="/fonts/cormorant-500.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          href="/fonts/golos-400.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <Header />

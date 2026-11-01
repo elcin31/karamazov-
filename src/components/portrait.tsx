@@ -13,7 +13,24 @@ const ids = [
   "liza",
 ];
 export function Portrait({ id, name }: { id: string; name: string }) {
-  const i = Math.max(0, ids.indexOf(id));
+  const i = ids.indexOf(id);
+  if (i < 0)
+    return (
+      <div
+        className="typographic-portrait"
+        aria-label={`${name}. Каталожная композиция без вымышленного портрета`}
+        role="img"
+      >
+        <span aria-hidden="true">
+          {name
+            .split(" ")
+            .map((n) => n[0])
+            .slice(0, 2)
+            .join("")}
+        </span>
+        <small>ДЕЙСТВУЮЩЕЕ ЛИЦО</small>
+      </div>
+    );
   return (
     <div
       role="img"

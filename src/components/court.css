@@ -1,0 +1,523 @@
+.court-workspace {
+  color: #23211e;
+}
+.court-locked {
+  max-width: 760px;
+  padding: 40px 0 60px;
+  border-top: 1px solid #cfc6b6;
+}
+.court-locked > svg {
+  color: #6c2933;
+}
+.court-locked h2 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 42px;
+  line-height: 1.15;
+  margin: 25px 0 20px;
+}
+.court-locked p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #71685e;
+}
+.court-locked > div {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.court-locked a,
+.court-locked button {
+  min-height: 46px;
+  padding: 12px 17px;
+  border: 1px solid #a99a86;
+  color: #6c2933;
+  background: transparent;
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 13px;
+}
+.court-method {
+  display: flex;
+  gap: 18px;
+  padding: 20px 0;
+  border-block: 1px solid #cfc6b6;
+  margin: 35px 0;
+  color: #71685e;
+}
+.court-method svg {
+  flex-shrink: 0;
+  color: #7d6249;
+  margin-top: 3px;
+}
+.court-method p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 100ch;
+  margin: 0;
+  color: #71685e;
+}
+.court-perspectives {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #cfc6b6;
+  gap: 20px;
+}
+.court-perspectives button {
+  text-align: left;
+  position: relative;
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  padding: 15px 10px 20px 48px;
+  color: #71685e;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 29px;
+  line-height: 1.15;
+}
+.court-perspectives button.active {
+  color: #6c2933;
+  border-bottom-color: #6c2933;
+}
+.court-perspectives button > span {
+  position: absolute;
+  left: 5px;
+  top: 19px;
+  font: 11px var(--sans, Arial, sans-serif);
+  color: #907b61;
+}
+.court-perspectives small {
+  display: block;
+  margin-top: 8px;
+  font: 11px var(--sans, Arial, sans-serif);
+  color: #71685e;
+}
+.court-perspective-note {
+  font-size: 13px !important;
+  line-height: 1.9;
+  color: #71685e !important;
+  margin: 20px 0 40px;
+  max-width: 100ch;
+}
+.court-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 55px;
+  align-items: start;
+}
+.court-heading h2,
+.court-witnesses > h2,
+.court-contradictions > h2 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 38px;
+  line-height: 1.15;
+  margin: 15px 0 18px;
+}
+.court-heading p {
+  font-size: 14px;
+  color: #71685e;
+  line-height: 1.85;
+}
+.court-heading > label {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 12px;
+  margin: 25px 0;
+}
+.court-heading select {
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #a99a86;
+  padding: 10px;
+  min-height: 44px;
+  color: #23211e;
+  font-size: 13px;
+}
+.court-evidence {
+  border-top: 1px solid #a99a86;
+  padding: 19px 0 21px;
+}
+.evidence-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+  color: #71685e;
+}
+.evidence-label strong {
+  font-size: 9px;
+  color: #6c2933;
+  font-weight: 500;
+}
+.court-evidence summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 15px;
+  cursor: pointer;
+  padding: 15px 0 13px;
+  list-style: none;
+}
+.court-evidence summary::-webkit-details-marker {
+  display: none;
+}
+.court-evidence summary h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 29px;
+  line-height: 1.2;
+  margin: 0;
+}
+.court-evidence summary svg {
+  flex-shrink: 0;
+  margin-top: 6px;
+  color: #7d6249;
+  transition: transform 0.2s;
+}
+.court-evidence details[open] > summary svg {
+  transform: rotate(180deg);
+}
+.court-evidence p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #71685e;
+}
+.evidence-summary {
+  color: #423b32 !important;
+}
+.evidence-arguments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  margin: 23px 0;
+}
+.court-evidence h4 {
+  font: 11px var(--sans, Arial, sans-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #6c2933;
+  margin: 0 0 10px;
+}
+.evidence-arguments p {
+  font-size: 13px;
+  margin: 0;
+}
+.evidence-limit {
+  border-left: 2px solid #9d8362;
+  padding-left: 18px;
+  margin: 25px 0;
+}
+.evidence-limit p {
+  font-size: 13px;
+  margin: 0;
+}
+.evidence-sources {
+  display: flex;
+  gap: 8px 18px;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+.evidence-sources a {
+  font-size: 11px;
+  color: #6c2933;
+  line-height: 1.7;
+}
+.evidence-select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  font-size: 12px;
+  color: #71685e;
+  cursor: pointer;
+}
+.evidence-select input {
+  width: 17px;
+  height: 17px;
+  accent-color: #6c2933;
+}
+.evidence-locked p {
+  font-size: 13px;
+}
+.court-notebook {
+  position: sticky;
+  top: 24px;
+  background: #e9e2d5;
+  padding: 27px;
+  color: #23211e;
+}
+.court-notebook > h2 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 34px;
+  margin: 12px 0 20px;
+}
+.court-empty,
+.court-backup-note {
+  font-size: 12px !important;
+  line-height: 1.85;
+  color: #71685e !important;
+}
+.comparison-list section {
+  border-top: 1px solid #c4b7a4;
+  padding: 15px 0;
+}
+.comparison-list header {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.comparison-list h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 23px;
+  line-height: 1.18;
+  margin: 0 0 10px;
+}
+.comparison-list button {
+  width: 36px;
+  min-width: 36px;
+  height: 36px;
+  border: 0;
+  background: none;
+  font-size: 25px;
+  color: #71685e;
+}
+.comparison-list p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #71685e;
+  margin: 0;
+}
+.court-verdict {
+  border-top: 1px solid #c4b7a4;
+  margin-top: 25px;
+  padding-top: 25px;
+}
+.court-verdict h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 30px;
+  margin: 0 0 18px;
+}
+.court-verdict fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0 0 22px;
+}
+.court-verdict fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  font-size: 12px;
+  cursor: pointer;
+}
+.court-verdict fieldset input {
+  accent-color: #6c2933;
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+}
+.court-reason-label {
+  font-size: 12px;
+  display: block;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+.court-verdict textarea {
+  display: block;
+  resize: vertical;
+  min-height: 150px;
+  width: 100%;
+  padding: 12px;
+  background: #f2efe6;
+  color: #23211e;
+  border: 1px solid #bcad99;
+  font-size: 13px;
+  line-height: 1.8;
+  border-radius: 0;
+}
+.court-save {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 46px;
+  background: #6c2933;
+  color: #f4efe5;
+  border: 1px solid #6c2933;
+  padding: 10px;
+  margin-top: 13px;
+  font-size: 12px;
+}
+.court-feedback {
+  font-size: 11px !important;
+  min-height: 20px;
+  color: #6c2933 !important;
+  margin: 10px 0;
+}
+.court-backup-note {
+  font-size: 10px !important;
+}
+.canonical-verdict {
+  border-top: 1px solid #c4b7a4;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.canonical-verdict summary {
+  font-size: 12px;
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  cursor: pointer;
+}
+.canonical-verdict p {
+  font-size: 12px;
+  line-height: 1.85;
+  color: #71685e;
+}
+.canonical-verdict a {
+  font-size: 11px;
+  color: #6c2933;
+}
+.court-witnesses,
+.court-contradictions {
+  margin-top: 55px;
+}
+.court-witnesses article {
+  border-top: 1px solid #cfc6b6;
+  padding: 23px 0;
+}
+.court-witnesses h3 {
+  font-family: var(--serif, Georgia, serif);
+  font-size: 29px;
+  margin: 0 0 6px;
+}
+.court-witnesses article > div > span {
+  font-size: 10px;
+  color: #7d6249;
+}
+.court-witnesses p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #71685e;
+}
+.court-witnesses a {
+  font-size: 11px;
+  color: #6c2933;
+}
+.court-contradictions details {
+  padding: 18px 0;
+  border-top: 1px solid #cfc6b6;
+}
+.court-contradictions summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  cursor: pointer;
+  font-family: var(--serif, Georgia, serif);
+  font-size: 25px;
+  line-height: 1.2;
+}
+.court-contradictions p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #71685e;
+}
+.court-contradictions details > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.court-contradictions details > div > span {
+  font-size: 10px;
+  color: #7d6249;
+  border-bottom: 1px solid #bcad99;
+  padding-bottom: 4px;
+}
+@media (max-width: 1050px) {
+  .court-layout {
+    grid-template-columns: minmax(0, 1fr) 290px;
+    gap: 30px;
+  }
+  .court-notebook {
+    padding: 22px;
+  }
+  .court-heading h2 {
+    font-size: 34px;
+  }
+  .evidence-arguments {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+@media (max-width: 760px) {
+  .court-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .court-notebook {
+    position: static;
+    padding: 25px;
+  }
+  .court-perspectives {
+    gap: 12px;
+  }
+  .court-perspectives button {
+    font-size: 24px;
+    padding-left: 30px;
+  }
+  .court-perspectives button > span {
+    left: 0;
+    font-size: 9px;
+  }
+  .court-perspectives small {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+  .court-method p {
+    font-size: 12px;
+  }
+  .court-heading h2,
+  .court-witnesses > h2,
+  .court-contradictions > h2 {
+    font-size: 33px;
+  }
+  .court-evidence summary h3 {
+    font-size: 28px;
+  }
+  .court-locked h2 {
+    font-size: 36px;
+  }
+  .court-locked p {
+    font-size: 14px;
+  }
+  .court-evidence p,
+  .court-witnesses p,
+  .court-contradictions p {
+    font-size: 13px;
+  }
+  .evidence-label {
+    font-size: 9px;
+  }
+  .court-perspective-note {
+    font-size: 12px !important;
+  }
+  .court-locked > div {
+    display: grid;
+  }
+  .court-locked a,
+  .court-locked button {
+    justify-content: center;
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .court-evidence summary svg {
+    transition: none;
+  }
+}

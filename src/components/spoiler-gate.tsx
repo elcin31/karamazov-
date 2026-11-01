@@ -16,7 +16,9 @@ export function SpoilerGate({
       <aside className="spoiler-gate">
         <span className="eyebrow">РЕЖИМ БЕЗ СПОЙЛЕРОВ</span>
         <p>
-          Этот материал обсуждает события до {chapter.book === 13 ? "эпилога" : `книги ${chapter.book}`}, главы {chapter.chapter}.{" "}
+          Этот материал обсуждает события до{" "}
+          {chapter.book === 13 ? "эпилога" : `книги ${chapter.book}`}, главы{" "}
+          {chapter.chapter}.{" "}
           <Link href={`/read/${chapter.id}`}>Перейти к чтению</Link> или
           отключить режим без спойлеров в верхней панели.
         </p>

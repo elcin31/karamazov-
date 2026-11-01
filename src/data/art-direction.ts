@@ -1,0 +1,30 @@
+/** Curatorial connections: context works remain explicitly identified in their captions. */
+export const studyArtwork: Record<string, string> = {
+  god: "christ-in-wilderness",
+  evil: "goya-inquisition",
+  freedom: "inquisitor",
+  responsibility: "monastic-refectory",
+  guilt: "ge-last-supper",
+  innocence: "perov-troika",
+  faith: "zosima-cell",
+  love: "grushenka-lamp",
+  rebellion: "brothers-tavern",
+  inquisitor: "inquisitor",
+  zosima: "ambrose-optina",
+  patricide: "dmitri-garden",
+  justice: "trial",
+  money: "makovsky-bank-crash",
+  family: "dostoevsky-family",
+  reason: "solovyov-portrait",
+  forgiveness: "stone-epilogue",
+};
+export const characterArtwork: Record<string, string> = {
+  dmitri: "dmitri-garden",
+  ivan: "brothers-tavern",
+  alexei: "stone-epilogue",
+  smerdyakov: "smerdyakov-kitchen",
+  zosima: "zosima-cell",
+  grushenka: "grushenka-lamp",
+  ilyusha: "boys-snegiryov",
+  snegiryov: "boys-snegiryov",
+};

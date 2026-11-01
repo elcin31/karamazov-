@@ -648,6 +648,14 @@ export function Reader({ chapterId }: { chapterId?: string }) {
               )}
               {current.title}
             </h1>
+            {current.book > 0 && (
+              <Link
+                className="reader-guide-link"
+                href={`/chapters/${current.id}`}
+              >
+                Путеводитель по этой главе ↗
+              </Link>
+            )}
             <div className="reader-chapter-meta">
               <span>Фёдор Михайлович Достоевский</span>
               <span>
